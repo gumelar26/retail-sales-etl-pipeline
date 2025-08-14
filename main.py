@@ -8,5 +8,5 @@ transactions_df = extract_csv(TRANSACTIONS_PATH)
 users_df = extract_json(USERS_PATH)
 
 # Transform
-transformed_df = transform_data(products_df)
+transformed_df = transform_data(products_df, transactions_df)
 print(transformed_df)
