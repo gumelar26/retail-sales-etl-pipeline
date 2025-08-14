@@ -11,4 +11,10 @@ def transform_data(products_df, transactions_df, users_df):
     # Dataframe Users
     users_df['email'] = users_df['email'].replace("", None)
 
-    return
+    # Dataframe merge
+    merge_df = transactions_df.merge(users_df, on='user_id', how='left') \
+                                .merge(products_df, on='product_id', how='left')
+
+    merge_df['amount'] = merge_df['quantity'] * merge_df['price']
+    
+    return merge_df
