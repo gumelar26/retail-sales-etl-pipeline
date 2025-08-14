@@ -1,4 +1,5 @@
-from config.setting import PRODUCTS_PATH, USERS_PATH, TRANSACTIONS_PATH, OUTPUT_PATH
+# from config.setting import PRODUCTS_PATH, USERS_PATH, TRANSACTIONS_PATH, OUTPUT_PATH
+import config.setting as cs
 from scripts.extract import extract_csv, extract_json
 from scripts.transform import transform_data
 from scripts.load import save_to_csv
